@@ -1,0 +1,148 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+/*Крестик в IE*/
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #000;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+svg {
+  position: absolute;
+  width: 400px;
+  fill: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+svg:nth-child(1) {
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+svg path {
+  d: path("M0,25 C150,110, 150,-60 300,25");
+  stroke: #ff0092;
+  stroke-width: 50;
+  stroke-linecap: round;
+  -webkit-transform: translate(50px, 50%);
+          transform: translate(50px, 50%);
+  -webkit-animation: anim 2s ease-in-out infinite;
+          animation: anim 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    stroke: #ff0092;
+    d: path("M0,25 C150,110, 150,-60 300,25");
+  }
+  50% {
+    stroke: #00ff00;
+    d: path("M0,25 C160,-50, 140,110 300,25");
+  }
+}
+
+@keyframes anim {
+  0% {
+    stroke: #ff0092;
+    d: path("M0,25 C150,110, 150,-60 300,25");
+  }
+  50% {
+    stroke: #00ff00;
+    d: path("M0,25 C160,-50, 140,110 300,25");
+  }
+}
